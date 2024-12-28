@@ -1,0 +1,76 @@
+/* start of general rules */
+body,body * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* end of general rules */
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 300px;
+        row-gap: 30px;
+    } 
+}
+
+.container .time{
+    display: flex;
+    column-gap: 2px;
+    font-size: 81px;
+    color: #f92672;
+    font-weight: 600;
+}
+
+@media (max-width: 400px) {
+    .container .time{
+        font-size: 60px;
+        font-weight: 600;
+    }
+}
+
+.container .buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.start, .stop, .reset {
+    padding: 15px 25px;
+    font-size: 23px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: #f92672;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+@media (max-width: 400px){
+    .start, .stop, .reset{
+        padding: 10px 20px;
+    }
+}
+
+.start:hover, .stop:hover, .reset:hover {
+    color: black;
+}
+
